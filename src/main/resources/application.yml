@@ -10,6 +10,8 @@ mybatis-plus:
   global-config:
     db-config:
       table-prefix: pro_
+      logic-delete-value: 1
+      logic-not-delete-value: 0
 
 logging:
   level:

@@ -12,7 +12,7 @@ import java.util.List;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-class ApplicationTests {
+class LogicDeleteTests {
 
     @Autowired
     private UserMapper userMapper;
@@ -21,6 +21,21 @@ class ApplicationTests {
     public void select() {
         List<User> userList = userMapper.selectList(null);
         userList.forEach(System.out::println);
+    }
+
+    @Test
+    public void deleteById() {
+        int rows = userMapper.deleteById(1094592041087729666L);
+        System.out.println("删除数：" + rows);
+    }
+
+    @Test
+    public void updateById() {
+        User user = new User();
+        user.setId(1094592041087729666L);
+        user.setAge(33);
+        int rows = userMapper.updateById(user);
+        System.out.println("更新数：" + rows);
     }
 
 }

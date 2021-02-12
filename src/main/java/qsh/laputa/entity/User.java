@@ -1,5 +1,6 @@
 package qsh.laputa.entity;
 
+import com.baomidou.mybatisplus.annotation.TableLogic;
 import lombok.Data;
 
 import java.time.LocalDateTime;
@@ -23,5 +24,6 @@ public class User {
 
     private Integer version;//版本
 
+    @TableLogic
     private Integer deleted;//逻辑删除标记(0，未删除；1，已删除)
 }
