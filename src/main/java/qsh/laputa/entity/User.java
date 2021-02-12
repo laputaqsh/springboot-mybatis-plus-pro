@@ -1,5 +1,6 @@
 package qsh.laputa.entity;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableLogic;
 import lombok.Data;
 
@@ -24,6 +25,7 @@ public class User {
 
     private Integer version;//版本
 
-    @TableLogic
+    @TableLogic     //逻辑删除标识
+    @TableField(select = false)// 不进行 select 查询
     private Integer deleted;//逻辑删除标记(0，未删除；1，已删除)
 }
