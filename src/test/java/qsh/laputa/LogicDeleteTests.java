@@ -1,8 +1,8 @@
 package qsh.laputa;
 
-import com.baomidou.mybatisplus.core.toolkit.Wrappers;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.junit.runner.RunWith;
+import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -13,7 +13,7 @@ import java.util.List;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-class LogicDeleteTests {
+public class LogicDeleteTests {
 
     @Autowired
     private UserMapper userMapper;
@@ -25,8 +25,8 @@ class LogicDeleteTests {
     }
 
     @Test
-    public void customSelect() {
-        List<User> userList = userMapper.customSelect(Wrappers.<User>lambdaQuery()
+    public void mySelect() {
+        List<User> userList = userMapper.mySelect(Wrappers.<User>lambdaQuery()
                 .gt(User::getAge, 25).eq(User::getDeleted, 0));
         userList.forEach(System.out::println);
     }

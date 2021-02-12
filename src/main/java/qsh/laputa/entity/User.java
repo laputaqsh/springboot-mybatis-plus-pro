@@ -1,5 +1,6 @@
 package qsh.laputa.entity;
 
+import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableLogic;
 import lombok.Data;
@@ -19,8 +20,10 @@ public class User {
 
     private Long managerId;//上级ID
 
+    @TableField(fill = FieldFill.INSERT)    //创建时填充数据
     private LocalDateTime createTime;//创建时间
 
+    @TableField(fill = FieldFill.UPDATE)    //更新时填充数据
     private LocalDateTime updateTime;//更新时间
 
     private Integer version;//版本
