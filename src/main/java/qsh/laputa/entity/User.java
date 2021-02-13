@@ -3,6 +3,7 @@ package qsh.laputa.entity;
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableLogic;
+import com.baomidou.mybatisplus.annotation.Version;
 import lombok.Data;
 
 import java.time.LocalDateTime;
@@ -26,6 +27,7 @@ public class User {
     @TableField(fill = FieldFill.UPDATE)    //更新时填充数据
     private LocalDateTime updateTime;//更新时间
 
+    @Version    //版本：newVersion = oldVersion + 1
     private Integer version;//版本
 
     @TableLogic     //逻辑删除标识
