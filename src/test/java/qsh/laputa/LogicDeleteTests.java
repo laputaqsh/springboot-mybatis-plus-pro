@@ -40,8 +40,8 @@ public class LogicDeleteTests {
     @Test
     public void updateById() {
         User user = new User();
-        user.setId(1094592041087729666L);
-        user.setAge(33);
+        user.setId(1360116789345845250L);
+        user.setAge(27);
         int rows = userMapper.updateById(user);
         System.out.println("更新数：" + rows);
     }
