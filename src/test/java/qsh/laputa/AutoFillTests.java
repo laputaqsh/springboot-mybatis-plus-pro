@@ -26,10 +26,10 @@ public class AutoFillTests {
     @Test
     public void insert() {
         User user = new User();
-        user.setName("张琪格");
-        user.setAge(26);
-        user.setEmail("zkx@baomidou.com");
-        user.setManagerId(1088248166370832385L);
+        user.setName("蔡译文");
+        user.setAge(30);
+        user.setEmail("cyw@baomidou.com");
+        //user.setManagerId(1088248166370832385L);
         int rows = userMapper.insert(user);
         System.out.println("插入数：" + rows);
     }
