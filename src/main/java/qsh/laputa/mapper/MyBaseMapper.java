@@ -12,4 +12,6 @@ public interface MyBaseMapper<T> extends BaseMapper<T> {
      * @return 影响行数
      */
     List<User> selectAll();
+
+    int insertBatchSomeColumn(List<T> list);
 }
