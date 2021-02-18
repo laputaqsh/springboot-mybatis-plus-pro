@@ -15,6 +15,7 @@ public class User {
 
     private String name;
 
+    @TableField(fill = FieldFill.UPDATE)
     private Integer age;
 
     private String email;
